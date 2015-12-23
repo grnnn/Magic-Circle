@@ -1,0 +1,33 @@
+TS classes:
+
+Separate the class definition into a header and separate member functions.
+This C-like implementation helps give readers a better sense of the class as a
+whole, and can help the writer organize their class structure to produce better
+OO code.
+
+example:
+
+export default class State
+{
+  // public function
+  thing : (input : number) => void;
+
+  // public variable
+  set name( name : number) {_name = name;};
+  get name(){return _name};
+}
+
+// private variable
+var _name : number;
+
+// private function
+function shhh()
+{
+  console.log("Be quiet");
+}
+
+// public function
+State.prototype.constructor = function()
+{
+
+}
